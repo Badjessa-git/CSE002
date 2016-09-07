@@ -1,8 +1,7 @@
 
-//Brian Chen
+//Badjessa Bahoumda
 //Demo 0
 //Hello World Java Program
-//
 //  first compile the program
 //      javac HelloWorld.java
 //  run the program
