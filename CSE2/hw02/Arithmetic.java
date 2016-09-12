@@ -52,9 +52,9 @@ public class Arithmetic{
         taxSweatshirts = totalCostOfSweatshirts * paSalesTax;
         
         //Printing values of tax charges on the items
-        System.out.println("The sale tax charged on the pants is "+taxPants+" dollars");
-        System.out.println("The sale tax charged on the Belt is "+taxBelts+" dollars");
-        System.out.println("The sale tax charged on the sweatshirts is "+taxSweatshirts+" dollars");
+        System.out.println("The sale tax charged on the pants is "+(((int) (taxPants*100))/100.0)+" dollars");
+        System.out.println("The sale tax charged on the Belt is "+(((int) (taxBelts*100))/100.0)+" dollars");
+        System.out.println("The sale tax charged on the sweatshirts is "+(((int) (taxSweatshirts*100))/100.0)+" dollars");
         
         double totalCostwotax; // the total cost without any tax
         totalCostwotax = totalCostOfPants + totalCostOfBelts + totalCostOfSweatshirts; //add all the total purchases together
@@ -67,7 +67,7 @@ public class Arithmetic{
         
         //Printing the total values
         System.out.println("The total cost without sales tax is "+totalCostwotax+" dollars");
-        System.out.println("The total sales tax on this purchase is "+totalSalestax+" dollars");
-        System.out.println("The total amount paid for this transaction is "+totalPaid+" dollars");
+        System.out.println("The total sales tax on this purchase is "+(((int) (totalSalestax*100))/100.0)+" dollars");
+        System.out.println("The total amount paid for this transaction is "+(((int) (totalPaid*100))/100.0)+" dollars");
     }
 }
