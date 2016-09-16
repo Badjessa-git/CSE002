@@ -10,7 +10,7 @@
 import java.util.Scanner;
 
 //defining class
-public class check{
+public class Check{
     //adding main method
     public static void main(String[] args){
         Scanner myScanner = new Scanner(System.in);
