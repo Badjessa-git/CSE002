@@ -16,7 +16,8 @@ public class Convert{
         double disMeter = myScanner.nextDouble();//recording the number typed by user
         
         double disInches; //defining the distance in inches
-        disInches = disMeter * 39.37007874;//converting factor from meter to inches
+        disInches = (int)((disMeter * 39.37007874)*10000)/10000.0;//converting factor from meter to inches
+        
         //printing result in inches
         System.out.println(disMeter+ " meters is " +disInches+ " inches");
     }//end of main method
