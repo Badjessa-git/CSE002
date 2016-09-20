@@ -8,7 +8,7 @@
 import java.util.Scanner;
 
 //defining class
-public class Convert{
+public class convert{
     //adding main method
     public static void main (String[] args){
         Scanner myScanner = new Scanner(System.in); //defining my scanner to get input from user

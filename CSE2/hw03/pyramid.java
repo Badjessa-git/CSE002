@@ -8,7 +8,7 @@
 import java.util.Scanner;
 
 //defining class
-public class Pyramid{
+public class pyramid{
     //add the main method
     public static void main(String[] args){
         Scanner myScanner = new Scanner(System.in);//using my scanner utility to get input from keyboard
