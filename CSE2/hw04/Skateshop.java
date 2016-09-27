@@ -25,7 +25,7 @@ public class Skateshop{
         int bdType;
         System.out.print("Press 0 if you want a trick board or 1 if you want a  longboard: ");
         bdType = myScanner.nextInt();
-        
+        System.out.print("Type the options as you see them appear on the screen");
         //asking the user to choose the specific board chosen
         int length = 0;
         String bdShape = "";
@@ -50,6 +50,56 @@ public class Skateshop{
                 System.out.print("Type in the type of longboard preferred: ");
                 bdShape = sdScanner.nextLine();
                 break;
+        }
+        //showing all the different options for boards
+        System.out.println("Options for all boards");
+        System.out.println("Wheels ");
+        //adding the flat-nose longboard exception and the trickboard exception
+        if (bdShape == "flat-nose longboard"){
+            System.out.println("Large wheels = +$29");
+        }
+        else if (bdType == 0 ){
+            System.out.println("Small wheels = +$0");
+        }
+        else {
+            System.out.println("Large wheels = +$29");
+            System.out.println("Small wheels = +$0");
+        }
+         //asking the user for the choice of wheels
+        System.out.print("Type your choice for wheels: ");
+        String wheels = sdScanner.nextLine();
+        //showing the exceptions to the user
+        System.out.println("Exceptions: ");
+        //showing bearing options
+        System.out.println("Bearings");
+        System.out.println("ABEC-9 = +$20");
+        System.out.println("ABEC-7 = +$10");
+        System.out.println("ABEC-5 = +$0");
+        //asking user for the choice of bearings
+        System.out.print("Type your choice of bearings: ");
+        String Brgs = sdScanner.nextLine();
+        //showing the different colors options for the user
+        System.out.println("Colors");
+        //adding the color exception to the code
+        if (bdType == 1){
+            System.out.println("Red = +$20");
+            System.out.println("Yellow = +$5");
+            System.out.println("Black = +$0");
+        }//if a longboard is chosen the color to show are red, yellow and black
+        else {
+            System.out.println("Red = +$20");
+            System.out.println("Blue = +$20");
+            System.out.println("Green = +$20");
+            System.out.println("Yellow = +$5");
+            System.out.println("Black = +$0");
+        }    
+        //asking the user for the choice of colors
+        System.out.print("Choose your color: ");
+        String Color = sdScanner.nextLine();
+        //telling the user that their choices is not applicable if conditions are met    
+        if ((bdType == 1) & (Color == "Green") | (Color == "Blue")){
+                    System.out.println("Longboards cannot be Green or Blue");
+                    System.exit(1);
         }
         //finding the different prices of length based on user input
         double price = 00.0;
@@ -80,52 +130,6 @@ public class Skateshop{
                     sprice = 120;
                     break;
             }
-            
-        //showing all the different options for boards
-        System.out.println("Options for all boards");
-        System.out.println("Wheels");
-        System.out.println("Large wheels = +$29");
-        System.out.println("Small wheels = +$0");
-         //asking the user for the choice of wheels
-        System.out.print("Type your choice for wheels: ");
-        String wheels = sdScanner.nextLine();
-        //showing bearing options
-        System.out.println("Bearings");
-        System.out.println("ABEC-9 = +$20");
-        System.out.println("ABEC-7 = +$10");
-        System.out.println("ABEC-5 = +$0");
-        //asking user for the choice of bearings
-        System.out.print("Type your choice of bearings: ");
-        String Brgs = sdScanner.nextLine();
-        //showing the different colors options for the user
-        System.out.println("Colors");
-        System.out.println("Red	= +$20");
-        System.out.println("Blue = +$20");
-        System.out.println("Green = +$20");
-        System.out.println("Yellow = +$5");
-        System.out.println("Black = +$0");
-        //asking the user for the choice of colors
-        System.out.print("Choose your color: ");
-        String Color = sdScanner.nextLine();
-    
-    //telling the user that their choices is not applicable if conditions are met    
-    if (bdType == 1){
-            if (Color == "Green"){
-                if(Color == "Blue"){
-                    System.out.println("Longboards cannot be Green or Blue");
-                }
-            }
-        }
-    if (bdShape == "flat-nose longboard"){
-            if (wheels == "Small Wheels"){
-                System.out.println("Flat-nose longboards cannot have small wheels");
-            }
-        }
-    if (bdType == 0){
-            if (wheels == "Large Wheels"){
-                System.out.println("non-Longboards cannot have large wheels");
-            }
-        }
     //finding price of wheels base on user input
     double wprice = 00.0;
     switch (wheels){
@@ -161,8 +165,14 @@ public class Skateshop{
             cprice = 0;
     }
     //declare the final and product
-    double fprice = price + wprice + bprice + cprice;
-    System.out.println("You chose the "+bdShape+length+" with "+wheels+ ",the bearing is "+Brgs+ " and the color is "+Color);
-    System.out.println("Your final price comes to $"+fprice);
+    double fprice = price + wprice + bprice + cprice + sprice;
+    //if statement for choice based on whether it is a trick board or longboard
+    if (bdType == 1){
+    System.out.println("You chose the "+bdShape+" with "+wheels+ ", the bearing type: "+Brgs+ " and the "+Color+ " color.");
     }
-}
+    else{
+        System.out.println("You chose the "+length+ " in trickboard with "+wheels+ ", the bearings type: "+Brgs+ "and the "+Color+ " color.");
+    }
+    System.out.println("Your final price comes to $"+fprice);
+    }//end of method
+}//end of class
