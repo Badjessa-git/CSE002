@@ -23,12 +23,20 @@ public class Triangles{
         }
         
                 for (int i = 1; i<=x; i++){
-                    System.out.print(+i); 
-                    for (int k = x; k>=i; k--){
-                        System.out.print(+k); 
-                        System.out.println();
-                    }
+                    for (int j = 1;j <= i; j++){
+                        System.out.print(i);
+                }
+                System.out.println();
+                }
+                for (int i=x ; i > 0; i--){
+                    for (int j = i; j>0; j--)
+                        System.out.print(i);
                     System.out.println();
                 }
-    }         
-}
+                
+    
+        }         
+    
+    }
+
+
