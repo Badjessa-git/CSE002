@@ -18,6 +18,7 @@ public class TwistGenerator{
             while (!myScanner.hasNextInt()){
             System.out.print("The number inputed is not an interger, input a positive integer: ");
             myScanner.next();
+            break;
         }
         //declaring num as the variable inputed in the program
         int num = myScanner.nextInt();

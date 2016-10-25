@@ -78,8 +78,8 @@ Scanner myScan = new Scanner(System.in);
             System.out.println("This is not an integer. input an integer: ");
             myScan.next();
         }
-        System.out.print("would you like to exit y/n? ");
-        ex = myScan.nextLine();
+        System.out.print("would you like to exit y/n?: ");
+        String ex = myScan.nextLine();
         if(ex == "y" || ex == "Y"){
             break;
         }
