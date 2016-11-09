@@ -51,13 +51,13 @@ public class Bowtie{
     X--;
 
 
-Scanner myScan = new Scanner(System.in);
+    Scanner myScan = new Scanner(System.in);
+    Scanner myScan2 = new Scanner(System.in);
     int y = 0;
     nStars = 0;
-    String ex = "";
     
     while (y == 0){
-        System.out.print("Enter an odd number between 3 and 33: ");
+        System.out.println("Enter an odd number between 3 and 33: ");
         if (myScan.hasNextInt()){
             nStars = myScan.nextInt();
             y = 1;
@@ -78,14 +78,53 @@ Scanner myScan = new Scanner(System.in);
             System.out.println("This is not an integer. input an integer: ");
             myScan.next();
         }
-        System.out.print("would you like to exit y/n?: ");
-        String ex = myScan.nextLine();
-        if(ex == "y" || ex == "Y"){
-            break;
+    Line = nStars/ 2;
+    X = 0;
+    S = 1;
+    k = 0;
+    Spce = 0;
+    
+    k = 100;
+    while(X < (Line + 1)){
+        k = k - 1;
+        Spce = 99;
+        while ( S <= nStars){
+            while(Spce > k){
+                System.out.print(" ");
+                Spce--;
+            }
+            System.out.print('*');
+            S++;
         }
-        }
-    }
+        System.out.println();
+        nStars = nStars - 2;
+        X++;
+        S = 1;
     }
     
+    nStars = nStars + 2;
+
+    while (S > 1){
+        nStars = nStars + 2;
+        S = 1;
+        k = k + 1;
+        Spce = 99;
+        while(X <= k){
+            System.out.print(" ");
+            Spce--;
+        }
+        System.out.print('*');
+        S++;
+    }
+    System.out.println();
+    X--;
 }
-        
+        System.out.print("would you like to exit y/n?: ");
+        String ex = myScan2.nextLine();
+        if(ex.equals("y") || ex.equals("Y")){
+             break;
+        }
+
+        }
+    }
+}
